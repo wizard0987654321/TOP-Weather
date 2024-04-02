@@ -10,9 +10,9 @@ function processData(data) {
     let isCelsius = checkUnit();
 
     if(isCelsius) {
-        temperature.textContent = data.current.feelslike_c;
+        temperature.textContent = data.current.feelslike_c + " Celsius";
     } else {
-        temperature.textContent = data.current.feelslike_f;
+        temperature.textContent = data.current.feelslike_f + " Farenheit";
     }
 
     img.src = `https:${data.current.condition.icon}`;
